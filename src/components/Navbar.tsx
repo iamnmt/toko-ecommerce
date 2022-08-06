@@ -8,8 +8,8 @@ function Navbar() {
         <p className="w-[180px] text-4xl font-bold"><Link href="/">Toko</Link></p>
         <div className="w-[750px] flex shadow">
           <input className="flex-1 px-4 py-2 text-black outline-0 rounded-l-sm" type="text" placeholder="Search for books..." />
-          <button className="bg-dark_blue flex items-center font-medium px-4">
-            <img className="w-5 h-5 mr-1 rounded-r-sm" src="/images/search-icon.png"/>
+          <button className="bg-dark_blue flex items-center font-medium px-4 rounded-r-sm">
+            <img className="w-5 h-5 mr-1" src="/images/search-icon.png"/>
             Search
           </button>
         </div>
