@@ -3,7 +3,7 @@ import RatingBar from "./minor/RatingBar"
 
 function Sidebar() {
   return (
-    <div className="flex flex-col gap-4 bg-green-200 px-3 text-sm">
+    <div className="flex flex-col gap-4 px-3 border-r border-r-gray-200 text-sm">
       <div>
         <p className="text-base font-semibold mb-2">Category</p>
         <ul className="flex flex-col gap-1">

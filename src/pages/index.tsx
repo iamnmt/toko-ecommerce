@@ -60,9 +60,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="w-[1270px] mx-12">
-        <div className="grid grid-cols-5 py-2 bg-red-200">
+        <div className="grid grid-cols-5 py-2 bg-white">
           <Sidebar />
-          <div className="bg-gray-200 col-span-4">
+          <div className="col-span-4">
             <Sorter/>
             <ProductList productData={tmp_product_data}/>
           </div>
