@@ -18,10 +18,10 @@ const tmp_product_data : any = [
     id: 1, 
     image: 'product-preview.jpg.webp',
     name: 'South Of The Border, West Of The Sun (Paperback)',
-    rating: 5,
+    rating: 4,
     soldCount: 10,
     price: 100000,
-    discountPercentage: 0
+    discountPercentage: 5
   },
   {
     id: 2, 
