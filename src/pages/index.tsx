@@ -13,7 +13,43 @@ const tmp_product_data : any = [
     soldCount: 10,
     price: 100000,
     discountPercentage: 0
-  }
+  },
+  {
+    id: 1, 
+    image: 'product-preview.jpg.webp',
+    name: 'South Of The Border, West Of The Sun (Paperback)',
+    rating: 5,
+    soldCount: 10,
+    price: 100000,
+    discountPercentage: 0
+  },
+  {
+    id: 2, 
+    image: 'product-preview.jpg.webp',
+    name: 'South Of The Border, West Of The Sun (Paperback)',
+    rating: 5,
+    soldCount: 10,
+    price: 100000,
+    discountPercentage: 0
+  },
+  {
+    id: 3, 
+    image: 'product-preview.jpg.webp',
+    name: 'South Of The Border, West Of The Sun (Paperback)',
+    rating: 5,
+    soldCount: 10,
+    price: 100000,
+    discountPercentage: 0
+  },
+  {
+    id: 4,
+    image: 'product-preview.jpg.webp',
+    name: 'South Of The Border, West Of The Sun (Paperback)',
+    rating: 5,
+    soldCount: 10,
+    price: 100000,
+    discountPercentage: 0
+  },
 ]
 
 const Home: NextPage = () => {
