@@ -1,6 +1,10 @@
+import dynamic from "next/dynamic"
 import Image from "next/image"
 import ProductPrice from "./minor/ProductPrice"
-import RatingBarProduct from "./minor/RatingBarProduct"
+
+const RatingBarProduct = dynamic(() => import('./minor/RatingBarProduct'), {
+  ssr: false
+})
 
 function ProductItem({ info } : any) {
   const { image, name, rating, soldCount, price, discountPercentage } = info
