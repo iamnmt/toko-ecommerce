@@ -6,8 +6,11 @@ export default function Layout({ children }: any) {
   return (
     <>
       <Navbar />
-      <Breadcrumb/>
-      <main>{children}</main>
+      <div className="bg-light_gray">
+        <Breadcrumb/>
+        <main>{children}</main>
+        <div className="h-6"></div>
+      </div>
       <Footer />
     </>
   )
