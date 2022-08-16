@@ -1,8 +1,9 @@
-import { getSingleBookSchema } from "../../schemas/book.schema";
+import { getAllBooksOutputSchema, getSingleBookSchema } from "../../schemas/book.schema";
 import { createRouter } from "../createRouter";
 
 export const bookRouter = createRouter()
   .query('books', {
+    output: getAllBooksOutputSchema,
     resolve({ ctx }) {
       return ctx.prisma.book.findMany()
     }
