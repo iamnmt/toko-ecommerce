@@ -1,10 +1,6 @@
-import dynamic from "next/dynamic"
 import Image from "next/image"
 import ProductPrice from "./minor/ProductPrice"
-
-const RatingBarProduct = dynamic(() => import('./minor/RatingBarProduct'), {
-  ssr: false
-})
+import RatingBar from "./minor/RatingBar"
 
 function ProductItem({ info } : any) {
   const { image, name, rating, soldCount, price, discountPercentage } = info
@@ -16,7 +12,11 @@ function ProductItem({ info } : any) {
         </div>
         <div className="flex flex-col">
           <p className="text-sm break-words">{name}</p>
-          <RatingBarProduct activeCount={rating} soldCount={soldCount} />
+          <div className="flex items-center">
+            <RatingBar activeCount={rating} size={14}/>
+            <div className="w-[2px] h-3 bg-[#c7c7c7] mx-1.5"></div>
+            <span className="text-[#787878] text-sm font-medium">{soldCount} Sold</span>
+          </div>
           <ProductPrice price={price} discountPercentage={discountPercentage} />
         </div>
       </div>

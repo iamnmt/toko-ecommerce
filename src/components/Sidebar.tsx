@@ -45,18 +45,21 @@ function Sidebar() {
         <p className="text-base font-semibold mb-2">Avg. Customer Review</p>
         <ul className="text-sm flex flex-col gap-1">
           <li className="flex items-center">
-            <a className="hover:text-dark_blue cursor-pointer">
-              <RatingBar activeCount={5}/>
+            <a className="hover:text-dark_blue cursor-pointer flex items-center">
+              <RatingBar activeCount={5} size={16}/>
+              <span className="ml-1">& Up</span>
             </a>
           </li>
           <li className="flex items-center">
-            <a className="hover:text-dark_blue cursor-pointer">
-              <RatingBar activeCount={4}/>
+            <a className="hover:text-dark_blue cursor-pointer flex items-center">
+                <RatingBar activeCount={4} size={16}/>
+                <span className="ml-1">& Up</span>
             </a>
           </li>
           <li className="flex items-center">
-            <a className="hover:text-dark_blue cursor-pointer">
-              <RatingBar activeCount={3}/>
+            <a className="hover:text-dark_blue cursor-pointer flex items-center">
+              <RatingBar activeCount={3} size={16}/>
+              <span className="ml-1">& Up</span>
             </a>
           </li>
         </ul>
