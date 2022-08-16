@@ -4,6 +4,7 @@ import ProductList from '../components/ProductList'
 import Sidebar from '../components/Sidebar'
 import Sorter from '../components/Sorter'
 import Pagination from '../components/Pagination'
+import { trpc } from '../utils/trpc'
 
 const tmp_product_data : any = [
   {
@@ -54,6 +55,12 @@ const tmp_product_data : any = [
 ]
 
 const Home: NextPage = () => {
+  const {isLoading, error, data} = trpc.useQuery(['books.books'])
+  if (isLoading) return <p>Loading...</p>
+  if (error) return <p>{JSON.stringify(error)}</p>
+
+  return <p>{JSON.stringify(data)}</p>
+  
   return (
     <div>
       <Head>
