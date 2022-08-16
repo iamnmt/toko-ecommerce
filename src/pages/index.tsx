@@ -3,6 +3,7 @@ import Head from 'next/head'
 import ProductList from '../components/ProductList'
 import Sidebar from '../components/Sidebar'
 import Sorter from '../components/Sorter'
+import Pagination from '../components/Pagination'
 
 const tmp_product_data : any = [
   {
@@ -67,6 +68,8 @@ const Home: NextPage = () => {
             <ProductList productData={tmp_product_data}/>
           </div>
         </div>
+        <div className="h-6"></div>
+        <Pagination currentPage={3}/>
       </div>
     </div>
   )
