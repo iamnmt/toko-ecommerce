@@ -1,9 +1,8 @@
-import { getAllBooksOutputSchema, getSingleBookSchema } from "../../schemas/book.schema";
+import { getSingleBookSchema } from "../../schemas/book.schema";
 import { createRouter } from "../createRouter";
 
 export const bookRouter = createRouter()
   .query('books', {
-    output: getAllBooksOutputSchema,
     resolve({ ctx }) {
       return ctx.prisma.book.findMany()
     }
@@ -13,8 +12,8 @@ export const bookRouter = createRouter()
     resolve({ ctx, input }) {
       return ctx.prisma.book.findUnique({
         where: {
-          id: input.bookId
-        }
+          id: input.id
+        },
       })
     }
   })

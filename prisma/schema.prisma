@@ -19,7 +19,7 @@ model Book {
   rating          Int      @default(5)
   quantity        Int      @default(0)
   sold            Int      @default(0)
-  discountPercent Decimal  @default(0)
+  discountPercent Int      @default(0)
   categoryId      String
   category        Category @relation(fields: [categoryId], references: [id])
   createdAt       DateTime @default(now())
